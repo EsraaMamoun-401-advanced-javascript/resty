@@ -26,7 +26,6 @@ class Form extends React.Component {
             url: this.state.url,
             rest: this.state.rest
         });
-        // console.log('cliiiiiiiiiiiiiick');
     }
 
     render() {
@@ -34,20 +33,22 @@ class Form extends React.Component {
             <>
                 <div id="mainDiv">
                     <form>
+                        <div id="URL">
                         <label id="URL">
                             <span>URL:</span>
                             <input type="text" name="url" onChange={this.handleUrl}></input>
+                            <button onClick={this.handleClick}>GO!</button>
                         </label>
-                        <div id="inputs">
-                            <input type="radio" id="" name="rest" value="GET" onChange={this.handleRest}></input><label>GET</label>
-                            <input type="radio" id="" name="rest" value="POST" onChange={this.handleRest}></input><label>POST</label>
-                            <input type="radio" id="" name="rest" value="PUT" onChange={this.handleRest}></input><label>PUT</label>
-                            <input type="radio" id="" name="rest" value="DELETE" onChange={this.handleRest}></input><label>DELETE</label>
                         </div>
-                        <button onClick={this.handleClick}>GO!</button>
+                        <div id="inputs">
+                        <span class="rest"><input type="radio" name="rest" value="GET" onChange={this.handleRest}></input>GET</span>
+                        <span class="rest"><input type="radio" name="rest" value="POST" onChange={this.handleRest}></input>POST</span>
+                        <span class="rest"><input type="radio" name="rest" value="PUT" onChange={this.handleRest}></input>PUT</span>
+                        <span class="rest"><input type="radio" name="rest" value="DELETE" onChange={this.handleRest}></input>DELETE</span>
+                        </div>
                     </form>
                     <div id="output">
-                        {this.state.rest}  <span> &nbsp; &nbsp; &nbsp; </span>    {this.state.url}
+                        {this.state.rest}   &nbsp; &nbsp; &nbsp; &nbsp;    {this.state.url}
                     </div>
                 </div>
             </>

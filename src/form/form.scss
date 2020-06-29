@@ -1,14 +1,29 @@
 form {
-    label {
-        margin-right: 30px;
-    }
-    #URL{
-        float: left;
-    }
-    #inputs {
-        clear: both;
-    }
-    button {
-        float: right;
-    }
+  width: 100%;
+
+  .rest {
+    padding: 0.3%;
+    margin: 1%;
+    border-radius: 5%;
+    background-color: #ccc;
+  }
+
+  #inputs{
+    margin-top: 2%;
+    margin-left: 35%;
+  }
+
+  #URL{
+    height: 2%;
+    margin-top: 5%;
+    margin-left: 21%;
+  }
+}
+
+#output {
+  background: #efefef;
+  border: 1px solid #ccc;
+  flex: 1;
+  margin: 5rem 2rem 5rem 2rem;
+  padding: 2rem 5rem 10rem 2rem;
 }
